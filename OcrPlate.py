@@ -46,8 +46,8 @@ class OcrPlate:
         
     def process_ocr(self, data_center_labe: np.array, labels_encoder: dict):
         delta = np.max(data_center_labe[:, 1]) - np.min(data_center_labe[:, 1])
-        
         out_ocr = None
+
         if(delta > 20):
             y_mean = np.mean(data_center_labe[:, 1])
             
@@ -63,5 +63,4 @@ class OcrPlate:
             data_center_labe = data_center_labe[data_center_labe[:, 0].argsort()]
             out_ocr = ''.join([labels_encoder[item] for item in data_center_labe[:,-1]])
             out_ocr = out_ocr[:3] + '-' + out_ocr[3:]
-        
         return out_ocr
