@@ -41,7 +41,7 @@ class OcrPlate:
                 digit = self.process_ocr(data_center_labe= data, labels_encoder= lbs)
                 self.digit_out.append(digit)
             
-            cv2.putText(self.image_output, str(digit), (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
+            cv2.putText(self.image_output, str(digit), (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
             cv2.rectangle(self.image_output, (x, y), (x1, y1), (0, 255, 0), 2)
         
     def process_ocr(self, data_center_labe: np.array, labels_encoder: dict):

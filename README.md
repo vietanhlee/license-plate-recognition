@@ -21,6 +21,10 @@
     cam = cv2.VideoCapture(0)
     ```
 ## Video chạy thử 
+![anh]('https://github.com/vietanhlee/license-plate-recognition/blob/main/1 line.png)
+<p style="text-align: center;">Nhận diện với biển 1 dòng</p>
 
+![anh]('https://github.com/vietanhlee/license-plate-recognition/blob/main/2 line.png)
+<p style="text-align: center;">Nhận diện với biển 2 dòng</p>
 
 ## Dự án vẫn đang tích hợp triển khai trên PyQt5 :__:

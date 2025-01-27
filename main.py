@@ -11,6 +11,7 @@ if not cam.isOpened():
 
 while True:
     check, cap = cam.read()
+    # cap = cv2.imread(r"C:\Users\levie\OneDrive\Documents\data set bien so\images\train\xemay68.jpg")
     cap = cv2.resize(cap, (800, 600))
 
     if(check == False):
