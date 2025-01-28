@@ -1,0 +1,6 @@
+test_ocr.ipynb
+__pycache__/
+
+# Logs and temporary files
+*.log
+*.tmp

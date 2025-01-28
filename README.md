@@ -20,13 +20,21 @@
     ```python
     cam = cv2.VideoCapture(0)
     ```
-## Chạy thử 
-![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/1%20line.png)
+## Kết quả với từng loại biển
+![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/1%20line.png)
 
 <p style="text-align: center;">Nhận diện với biển 1 dòng</p>
 
-![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/2%20line.png)
+![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/2%20line.png)
 
 <p style="text-align: center;">Nhận diện với biển 2 dòng</p>
 
-## Dự án vẫn đang tích hợp triển khai trên PyQt5 :__:
+## Tích hợp vào dự án hệ thống nhận diện biển số trạm thu vé trên PyQt5 (mới làm phần nhận biển và lưu lại data)
+
+- Hiện tại mới làm chức năng lưu hình ảnh biển số và nhãn vào thư mục
+
+- Vào thư mục Qt5 và chạy file `main.py` để thử
+
+![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/qt5.png)
+
+<p style="text-align: center;">Demo trên Qt5 </p>
