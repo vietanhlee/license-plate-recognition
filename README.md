@@ -23,11 +23,11 @@
 ## Kết quả với từng loại biển
 ![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/1%20line.png)
 
-<p style="text-align: center;">Nhận diện với biển 1 dòng</p>
+<p align = 'center'>Nhận diện với biển 1 dòng</p>
 
 ![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/2%20line.png)
 
-<p style="text-align: center;">Nhận diện với biển 2 dòng</p>
+<p align = 'center'>Nhận diện với biển 2 dòng</p>
 
 ## Tích hợp vào dự án hệ thống nhận diện biển số trạm thu vé trên PyQt5 (mới làm phần nhận biển và lưu lại data)
 
@@ -37,4 +37,4 @@
 
 ![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/qt5.png)
 
-<p style="text-align: center;">Demo trên Qt5 </p>
+<p align = 'center'>Demo trên Qt5 </p>
