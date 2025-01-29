@@ -4,4 +4,4 @@ __pycache__/
 # Logs and temporary files
 *.log
 *.tmp
-*.ipynb
+test_ocr.ipynb
