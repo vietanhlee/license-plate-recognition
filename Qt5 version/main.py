@@ -4,7 +4,6 @@ from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QImage, QPixmap
 import cv2
 from OcrPlate import OcrPlate
-import numpy as np
 
 path_plate = 'model/best_plate.pt'
 path_ocr = 'model/best_ocr.pt'
