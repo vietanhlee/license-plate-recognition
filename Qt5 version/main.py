@@ -20,7 +20,7 @@ class Main(Ui_MainWindow):
         
         self.timer = QTimer()
         self.timer.timeout.connect(self.update_frame)
-        self.timer.start(10)  # Update every 30ms (approx 33 FPS)
+        self.timer.start(30)  # Update every 30ms (approx 33 FPS)
 
     def update_frame(self):
         ret, frame = self.cap.read()
