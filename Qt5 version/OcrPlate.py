@@ -30,7 +30,7 @@ class OcrPlate:
             # Cắt ảnh biển số ra trước rồi mới vẽ
             img_plate = self.image_input[y : y1, x : x1]
             # predict các kí tự của biển số
-            res_ocr = self.model_ocr.predict(verbose = False, source= img_plate, conf = 0.6)
+            res_ocr = self.model_ocr.predict(verbose = False, source= img_plate, conf = 0.2)
             # Lấy số lượng kí tự của biển số vừa predict
             len_digits = len(res_ocr[0].boxes.cls) # == len(box)
 

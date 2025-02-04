@@ -29,8 +29,10 @@ class OcrPlate:
             x, y, x1, y1 = map(int, [x, y, x1, y1])
             # Cắt ảnh biển số ra trước rồi mới vẽ
             img_plate = self.image_input[y : y1, x : x1]
+
+            # img_plate = self.preprocess_image(img_plate)
             # predict các kí tự của biển số
-            res_ocr = self.model_ocr.predict(verbose = False, source= img_plate, conf = 0.6)
+            res_ocr = self.model_ocr.predict(verbose = False, source= img_plate, conf = 0.2)
             # Lấy số lượng kí tự của biển số vừa predict
             len_digits = len(res_ocr[0].boxes.cls) # == len(box)
 
@@ -58,7 +60,6 @@ class OcrPlate:
             # Vẽ lên màn box và biển
             cv2.putText(self.image_output, str(digit), (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2)
             cv2.rectangle(self.image_output, (x, y), (x1, y1), (0, 255, 0), 2)
-    
     # Hàm xử lý đọc kí tự và sắp xếp lại chúng
     def process_ocr(self, data_center_labe: list, labels_encoder: dict):
         '''Hàm này dùng để nhận biết loại biển đang nhận diện là loại 1 dòng hay 2 dòng
@@ -95,3 +96,21 @@ và dict giải mã của label (labels_encoder)
             
             out_ocr = out_ocr[:3] + '-' + out_ocr[3:]
         return out_ocr
+
+
+    # def preprocess_image(self, image):
+    #     """Tiền xử lý ảnh biển số để tăng độ tương phản và giảm nhiễu"""
+        
+    #     # 1. Chuyển ảnh sang Grayscale
+    #     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+        
+    #     # 2. Khử nhiễu bằng fastNlMeansDenoising (Giữ biên sắc nét)
+    #     gray = cv2.fastNlMeansDenoising(gray, None, 30, 7, 21)
+
+    #     # 3. Cải thiện độ tương phản bằng CLAHE
+    #     # clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    #     # contrast_enhanced = clahe.apply(gray_denoised)
+
+        
+    #     gray = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB)
+    #     return gray

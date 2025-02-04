@@ -9,3 +9,6 @@ __pycache__/
 
 # Ignore temporary files
 *.tmp
+
+tempCodeRunnerFile.ipynb
+t.ipynb

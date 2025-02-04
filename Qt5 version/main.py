@@ -12,14 +12,14 @@ class Main(Ui_MainWindow):
     def __init__(self, MainWindow):
         super().__init__(MainWindow)
 
-        self.cap = cv2.VideoCapture(r'G:\Nhan dien bien so\test.MOV')
+        self.cap = cv2.VideoCapture(r'test.MOV')
         if not self.cap.isOpened():
             print("Không thể mở camera")
             return
         
         self.timer = QTimer()
         self.timer.timeout.connect(self.update_frame)
-        self.timer.start(30)  # Update every 30ms (approx 33 FPS)
+        self.timer.start(30)
 
     def update_frame(self):
         ret, frame = self.cap.read()
@@ -48,7 +48,6 @@ class Main(Ui_MainWindow):
         else:
             print("Không đọc được ảnh")
     def closeEvent(self, event):
-        # Release the camera and stop the timer when the application closes
         if self.cap.isOpened():
             self.cap.release()
         self.timer.stop()
@@ -60,8 +59,6 @@ class Main(Ui_MainWindow):
         # Chuyển numpy array về dạng bytes trước khi tạo QImage
         res = QImage(image.tobytes(), w, h, bytes_per_line, QImage.Format_RGB888)
         return res
-
-
 
 import sys
 
