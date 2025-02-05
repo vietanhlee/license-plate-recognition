@@ -19,13 +19,13 @@ while True:
         print('Không đọc được ảnh')
         break   
     # Chuyển về ảnh RGB vì model được huấn luyện đọc ảnh bằng rgb
-    cap_rgb = cv2.cvtColor(cap, cv2.COLOR_BGR2RGB)
+    # cap_rgb = cv2.cvtColor(cap, cv2.COLOR_BGR2RGB)
 
-    Dectect = OcrPlate(path_model_detect_plate= path_plate, path_model_ocr= path_ocr, imgage_input= cap_rgb)
+    Dectect = OcrPlate(path_model_detect_plate= path_plate, path_model_ocr= path_ocr, imgage_input= cap)
     # Lấy ra img cuối cùng sau khi đã vẽ các box và đánh nhãn các biển số
     img_out = Dectect.image_output
     # Chuyển về BRG để cv2 hiển thị lên màn 
-    img_out = cv2.cvtColor(img_out, cv2.COLOR_BGR2RGB)
+    # img_out = cv2.cvtColor(img_out, cv2.COLOR_BGR2RGB)
     # Ghi ra màn
     cv2.imshow('test code', img_out)
     

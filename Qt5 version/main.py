@@ -25,11 +25,11 @@ class Main(Ui_MainWindow):
         ret, frame = self.cap.read()
         # frame = cv2.flip(frame, 1)
         if ret:
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             frame_cp = frame.copy()
             # frame = self.convert_qimg(frame)
             a = OcrPlate(path_model_detect_plate= path_plate, path_model_ocr= path_ocr, imgage_input= frame)
-            frame_main = self.convert_qimg(a.image_output)
+            frame_main = self.convert_qimg(cv2.cvtColor(a.image_output, cv2.COLOR_BGR2RGB))
             digits = a.digit_out
 
             if(digits != 'unknow'):
