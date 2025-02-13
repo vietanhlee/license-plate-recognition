@@ -32,7 +32,7 @@ Việc phát hiện biển số và các kí tự có trên biển có thể đ�
 
 <p align = 'center'>Nhận diện với biển 2 dòng</p>
 
-## Tích hợp vào dự án hệ thống nhận diện biển số trạm thu vé trên PyQt5
+## Tích hợp vào dự án quản lý vé xe phục vụ cho bãi gửi xe trên PyQt5
 
 Link project ở [đây](https://github.com/vietanhlee/parking-ticket-management)
 
