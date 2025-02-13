@@ -7,10 +7,11 @@
 
 - Kết hợp hai model trên lại với nhau và dùng một số xử lý logic về khoảng cách các tâm của bounding box với nhau mà cho ra được biển số đó có những kí tự gì, và sắp xếp chúng để thành biển số hoàn chỉnh
 
+> File `OcrPlate.py` chính là class gồm một số công cụ trong đó có chức năng trả về kí tự đọc được trên biển số từ một ảnh được đưa vào
 ## Chạy code
 - **B1**: clone dự án về và chạy lệnh sau trên terminal tại chính folder mà đã clone:
     ```bash
-        pip install -r 'requirements.txt'
+    pip install -r 'requirements.txt'
     ```
 - **B2**: tại file `main.py` nhấn run để chạy demo theo video có sẵn hoặc nếu muốn nhận diện theo real time bằng camera chính thì có thể thay dòng:
     ```python
@@ -21,6 +22,8 @@
     cam = cv2.VideoCapture(0)
     ```
 ## Kết quả với từng loại biển
+Việc phát hiện biển số và các kí tự có trên biển có thể được coi là dễ nhưng việc từ các kí tự đó sắp xếp sao cho đúng trình tự thì là một vấn đề khá phức tạp
+
 ![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/1%20line.png)
 
 <p align = 'center'>Nhận diện với biển 1 dòng</p>
@@ -29,12 +32,10 @@
 
 <p align = 'center'>Nhận diện với biển 2 dòng</p>
 
-## Tích hợp vào dự án hệ thống nhận diện biển số trạm thu vé trên PyQt5 (mới làm phần nhận biển và lưu lại data)
+## Tích hợp vào dự án hệ thống nhận diện biển số trạm thu vé trên PyQt5
 
-- Hiện tại mới làm chức năng lưu hình ảnh biển số và nhãn vào thư mục
+Link project ở [đây](https://github.com/vietanhlee/parking-ticket-management)
 
-- Vào thư mục Qt5 và chạy file `main.py` để thử
-
-![anh](https://raw.githubusercontent.com/vietanhlee/license-plate-recognition/refs/heads/main/display%20github/qt5.png)
+![anh](https://raw.githubusercontent.com/vietanhlee/parking-ticket-management/refs/heads/main/display_github/Screenshot%202025-02-13%20191333.png)
 
 <p align = 'center'>Demo trên Qt5 </p>
