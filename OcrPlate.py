@@ -43,7 +43,7 @@ và thiết đặt image_out là ảnh được vẽ (box và kí tự lên trê
             digit = 'unknow'
             # Biển số Việt Nam thường có 7 đến 10 kí tự
             # Và ta cũng chỉ chấp nhận độ tin cậy của dự đoán các kí tự này nhỏ nhất của nó là phải lớn hơn 0.7
-            if (len_digits >= 7 and len_digits <= 10) and min(res_ocr[0].boxes.conf) > 0.7:
+            if (len_digits >= 7 and len_digits <= 10) and min(res_ocr[0].boxes.conf) > 0.65:
                 # Đoạn code dưới là tạo ra 1 mảng np.array 2D mà các cột lần lượt là x_center, y_center, label đã được mã hóa
                 cls = res_ocr[0].boxes.cls # cls là labels các kí tự nhưng đã được mã hóa
                 cls = cls.reshape(-1, 1) # Reshape về dạng 1 cột 
@@ -76,8 +76,8 @@ và dict giải mã của label (labels_encoder), trả về kí tự hoàn ch�
         delta_y_max = np.max(data_center_labe[:, 1]) - np.min(data_center_labe[:, 1])
         
         out_ocr = None
-        # Nếu lớn hơn 20 thì là biển loại 2 dòng
-        if(delta_y_max > 20):
+        # Nếu lớn hơn 30 thì là biển loại 2 dòng
+        if(delta_y_max > 30):
             # Tính tọa độ y trung bình để phân loại dòng thứ nhất và dòng thứ 2
             y_mean = np.mean(data_center_labe[:, 1])
             

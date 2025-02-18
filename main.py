@@ -6,7 +6,7 @@ path_plate = 'model/best_plate.pt'
 path_ocr = 'model/best_ocr.pt'
 
 ocr_plate = OcrPlate(path_model_detect_plate=path_plate, path_model_ocr=path_ocr)
-cam = cv2.VideoCapture(r"test.MOV")
+cam = cv2.VideoCapture(2)
 
 if not cam.isOpened():
     print('không thể mở cam')
